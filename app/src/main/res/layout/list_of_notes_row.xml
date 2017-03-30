@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/body_shape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintVertical_bias="0.0">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/list_of_notes_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_of_notes_date_value"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_of_notes_done"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/list_of_notes_done_image"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body" />
+
+    <TextView
+        android:id="@+id/list_of_notes_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_of_notes_id_value"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_of_notes_id"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/list_of_notes_id"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body" />
+
+    <TextView
+        android:id="@+id/list_of_notes_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/list_of_notes_body_value"
+        android:textColor="@android:color/black"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_of_notes_date"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/list_of_notes_date"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body" />
+
+    <ImageView
+        android:id="@+id/list_of_notes_done_image"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:paddingRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_notes_body"
+        app:srcCompat="@drawable/glyphicons_remove" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/title_shape"   >
+
+        <TextView
+            android:id="@+id/list_of_notes_title"
+            android:layout_width="0dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="5dp"
+            android:text="@string/list_of_notes_title_value"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
