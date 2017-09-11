@@ -1,9 +1,15 @@
-# Sticky Notes Android Client
-Android client for sticky notes web service.
+## StickyNotes - Android client
 
-Features:
-* consuming a RESTful Web Service with Spring for Android
+### Description
+Android client for sticky notes RESTful web service
 
+### Features ANDROID
+- consuming JSONs from RESTful web service
+
+### More info & Source code WEB
+github.com/twistezo/StickyNotes
+
+### Screenshots
 <table>
     <tr>
         <td>
