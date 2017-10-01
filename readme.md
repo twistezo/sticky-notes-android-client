@@ -7,7 +7,7 @@ Android client for sticky notes RESTful web service
 - consuming JSONs from RESTful web service
 
 ### More info & Source code WEB
-github.com/twistezo/StickyNotes
+github.com/twistezo/sticky-notes
 
 ### Screenshots
 <table>
