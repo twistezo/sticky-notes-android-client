@@ -4,10 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Date;
 
-/**
- * @author twistezo (28.03.2017)
- */
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 class Note {
     private Long id;
@@ -17,7 +13,8 @@ class Note {
     private boolean noteChecked;
     private boolean done;
 
-    public Note() { }
+    public Note() {
+    }
 
     Long getId() {
         return id;

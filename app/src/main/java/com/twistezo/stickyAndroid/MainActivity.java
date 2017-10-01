@@ -26,17 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        Get JSON data and set them to custom listView adapter
-         */
         new HttpRequestListOfNotes().execute();
         ListView listView = (ListView) findViewById(R.id.list_of_notes_view);
         NotesCustomAdapter adapter = new NotesCustomAdapter(notes, getApplicationContext());
         listView.setAdapter(adapter);
 
-        /*
-        Event listener. We can click one note and go to OneNoteActivity
-         */
         AdapterView.OnItemClickListener adapterViewListener = new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Note note = notes.get(position);
@@ -52,18 +46,12 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(adapterViewListener);
     }
 
-    /*
-    Create options in menu bar
-     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
-    /*
-    Refresh activity and Http request for JSON
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -76,9 +64,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Retrieve JSON array data from url and unpack to Note[]
-     */
     private class HttpRequestListOfNotes extends AsyncTask<Object, Object, List<Note>> {
         @Override
         protected List<Note> doInBackground(Object... params) {
@@ -86,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 final String url = "http://192.168.0.12:8080/rest/notes";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Note[] notesTemp = restTemplate.getForObject(url , Note[].class);
+                Note[] notesTemp = restTemplate.getForObject(url, Note[].class);
                 notes = Arrays.asList(notesTemp);
                 return notes;
             } catch (Exception e) {
@@ -96,4 +81,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
