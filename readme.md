@@ -1,7 +1,7 @@
 ## StickyNotes - Android client
 
 ### Description
-Android client for sticky notes RESTful web service
+Android client for sticky notes RESTful web service (non-commercial)
 
 ### Features ANDROID
 - consuming JSONs from RESTful web service
